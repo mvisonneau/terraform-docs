@@ -77,7 +77,7 @@ func Create(files map[string]*ast.File) *Doc {
 		filename := path.Base(name)
 		comments := f.Comments
 
-		if filename == "main.tf" && len(comments) > 0 {
+		if len(comments) > 0 {
 			doc.Comment = header(comments[0])
 		}
 	}
